@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Apache Wicket Quickstart</title>
+        <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet"/>
+    </head>
+    <body>
+        <div id="hd">
+            <div id="logo">
+                <img src="logo.png" width="50px" height="50px" alt="Wicket Logo"/>
+
+                <h1>Apache Wicket Mustache</h1>
+            </div>
+        </div>
+        <div id="bd">
+            <h3>Template:</h3>
+
+            <p><pre><code>Items:&lt;br&gt;
+            {{#items}}
+            Name: {{name}}&lt;br&gt;
+            Price: {{price}}&lt;br&gt;
+            {{#features}}
+            "Feature": {{.}}&lt;br&gt;
+            {{/features}}
+            {{^eatures}}
+            no features.
+            {{/features}}&lt;br&gt;
+            {{/items}}</code></pre>
+            </p>
+
+            <h3>Result (server side rendering):</h3>
+
+            <p wicket:id="template">
+            </p>
+
+            <h3>Result (client side rendering):</h3>
+
+            <p wicket:id="template-client">
+            </p>
+
+            <h3>Result (client side lazy rendering):</h3>
+
+            <p wicket:id="template-lazy">
+            </p>
+        </div>
+        <div id="ft">
+        </div>
+    </body>
+</html>
